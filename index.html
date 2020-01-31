@@ -222,13 +222,13 @@ var rangeValue = function(){
         if (message.destinationName == '/' + usuario + '/' + 'nivel') { 
        g.refresh(message.payloadString);
        nivel= parseInt(message.payloadString);
-          if (nivel <= 0) {
+          if (nivel <= 3) {
             strEstado = "Abierto";
           }
-          if(nivel >0 && nivel<90) {
+          if(nivel >3 && nivel<87) {
             strEstado = "Moviendo";
           }
-          if(nivel >=90) {
+          if(nivel >=87) {
             strEstado = "Cerrado";
           }
        if (strEstado != strEstadoUltimo) { //envia el estado solamente cuando cambia.
